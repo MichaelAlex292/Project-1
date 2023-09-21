@@ -1,0 +1,300 @@
+/*
+
+Project 1: Event
+Michael Alexander
+01/11/2023
+
+Description: The goal of this project is to provide a selection of
+3 different packages for a given holiday party. The menu will allow you 
+to enter package choice, number of hours, and number of people.
+
+*/
+
+#include <stdio.h> // includes standard input output
+
+int main() { // main fxn
+
+    int package, hours, rental, people, min_cost, hourly_rate, max_cost, min_guest, max_guest, people_price, food_cost, total; // initializes variables
+    printf("Please select from three packages: 1, 2, and 3\n"); // first print statement
+    printf("Enter package selection: ");
+    scanf("%d", &package); // scans number for package
+
+    if (package == 1) { // if else statements for first selection
+
+        min_cost = 50; // variables for package selection are defined here
+        hourly_rate = 25;
+        max_cost = 95;
+        min_guest = 50;
+        max_guest = 200;
+        food_cost = 25;
+
+        printf("Enter hours: "); // hours for room
+        scanf("%d", &hours);
+
+        if ((hours < 1) || (hours > 4)) { // condition for hours
+            printf("Invalid input. Enter a positive number less than or equal to 4 for number of hours.\n");
+        }
+
+        else if (hours == 1) { // first hour cost condition
+
+            rental = min_cost; // equals min cost
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) { // less than minimum guests = bad
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) { // greater than maximum guests = bad
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else { // number of guests is valid
+
+                people_price = people * food_cost;
+                total = rental + people_price; // TOTAL PRICE
+
+                printf("Charge($): $%d\n", total); // prints price
+            }
+        }
+
+        /*
+        
+        The next 2 blocks of code are essentially repeated with packages 2 and 3, so the comments provided
+        in package 1 apply to 2 and 3.
+        
+        */
+
+        else if (hours == 2) {
+
+            rental = min_cost + (hours * hourly_rate);
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+        else {
+
+            rental = max_cost;
+            
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+    }
+
+    else if (package == 2) {
+
+        min_cost = 30;
+        hourly_rate = 15;
+        max_cost = 55;
+        min_guest = 80;
+        max_guest = 300;
+        food_cost = 22;
+
+        printf("Enter hours: ");
+        scanf("%d", &hours);
+
+        if ((hours < 1) || (hours > 4)) {
+            printf("Invalid input. Enter a positive number less than or equal to 4 for number of hours.\n");
+        }
+
+        else if (hours == 1) {
+
+            rental = min_cost;
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+        else if (hours == 2) {
+
+            rental = min_cost + (hours * hourly_rate);
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+        else {
+
+            rental = max_cost;
+            
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+    }
+
+    else if (package == 3) {
+
+        min_cost = 20;
+        hourly_rate = 12;
+        max_cost = 40;
+        min_guest = 30;
+        max_guest = 150;
+        food_cost = 20;
+
+        printf("Enter hours: ");
+        scanf("%d", &hours);
+
+        if ((hours < 1) || (hours > 4)) {
+            printf("Invalid input. Enter a positive number less than or equal to 4 for number of hours.\n");
+        }
+
+        else if (hours == 1) {
+
+            rental = min_cost;
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+        else if (hours == 2) {
+            rental = min_cost + (hours * hourly_rate);
+
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+
+        else {
+            rental = max_cost;
+            
+            printf("Enter number of people: ");
+            scanf("%d", &people);
+
+            if (people < min_guest) {
+                printf("Not meeting minimum requirement for number of guests.\n");
+            }
+
+            else if (people > max_guest) {
+                printf("Exceeded maximum number of guests.\n");
+            }
+
+            else {
+
+                people_price = people * food_cost;
+                total = rental + people_price;
+
+                printf("Charge($): $%d\n", total);
+            }
+        }
+        
+    }
+
+    else {
+        printf("Invalid selection. Select from 1 to 3.\n");
+    }
+    return 0;
+}
